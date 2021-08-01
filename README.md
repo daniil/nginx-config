@@ -79,3 +79,21 @@ Run certbot (need to do it for each subdomain):
 ```
 certbot --nginx --redirect -d hostname.com -d www.hostname.com -m admin@hostname.com --agree-tos
 ```
+
+## Running Node as a process
+
+https://github.com/foreversd/forever
+
+```
+# Start an app
+forever start script.js
+
+# List all running apps
+forever list
+
+# Stop an app
+forever stop <index|appId>
+
+# View app logs
+forever logs <index>
+```
