@@ -11,6 +11,14 @@ server {
     listen 80;
     listen [::]:80;
     server_name hostname.com, www.hostname.com;
+    
+    # SSL configuration (using LetsEncrypt instructions below)
+    listen 443 default_server ssl;
+    ssl_certificate     /etc/letsencrypt/live/hostname.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/hostname.com/privkey.pem;
+
+    # subdomain example
+    server_name subdomain.hostname.com;
 
     # Default path for the hostname
     location / {
@@ -66,7 +74,7 @@ server {
 }
 ```
 
-Run certbot:
+Run certbot (need to do it for each subdomain):
 
 ```
 certbot --nginx --redirect -d hostname.com -d www.hostname.com -m admin@hostname.com --agree-tos
