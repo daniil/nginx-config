@@ -41,3 +41,33 @@ sudo systemctl start nginx
 sudo systemctl reload nginx
 sudo systemctl status nginx
 ```
+
+## SSL Certificate
+
+First, update snap:
+
+```
+sudo snap install core; sudo snap refresh core
+```
+
+Install certbot:
+
+```
+sudo snap install --classic certbot
+```
+
+Configure the default virtual host:
+
+```
+nano /etc/nginx/conf.d/default.conf
+
+server {
+    server_name  hostname.com www.hostname.com;
+}
+```
+
+Run certbot:
+
+```
+certbot --nginx --redirect -d hostname.com -d www.hostname.com -m admin@hostname.com --agree-tos
+```
