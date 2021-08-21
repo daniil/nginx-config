@@ -80,7 +80,7 @@ Run certbot (need to do it for each subdomain):
 certbot --nginx --redirect -d hostname.com -d www.hostname.com -m admin@hostname.com --agree-tos
 ```
 
-## Running Node as a process
+## Running Node as a Process
 
 https://github.com/foreversd/forever
 
@@ -96,4 +96,18 @@ forever stop <index|appId>
 
 # View app logs
 forever logs <index>
+```
+
+## Checking Services
+
+To list all services:
+
+```
+service --status-all
+```
+
+To check status of a single service:
+
+```
+systemctl status <service_name>
 ```
