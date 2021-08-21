@@ -101,6 +101,10 @@ forever stop <index|appId>
 forever logs <index>
 ```
 
+### Force Killing the Process
+
+sudo kill -9 $(sudo lsof -t -i:<PORT_NUMBER>)
+
 ## Checking Services
 
 To list all services:
