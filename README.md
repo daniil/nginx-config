@@ -25,6 +25,9 @@ server {
       proxy_set_header   X-Forwarded-For $remote_addr;
       proxy_set_header   Host $http_host;
       proxy_pass         http://0.0.0.0:3000/;
+
+      proxy_set_header   Upgrade $http_upgrade; # to enable WebSockets
+      proxy_set_header   Connection "upgrade"; # to enable WebSockets
     }
 
     # Redirecting path to app
