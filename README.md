@@ -1,5 +1,9 @@
 # NGINX Config
 
+## Default Site
+
+Found at `/usr/share/nginx/html/index.html`
+
 ## Reverse Proxy
 
 Create a file at `/etc/nginx/sites-available/app-name.conf`.
