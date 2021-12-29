@@ -124,3 +124,15 @@ To check status of a single service:
 ```
 systemctl status <service_name>
 ```
+
+### Restarting NGINX
+
+```
+sudo systemctl reload nginx
+```
+
+## Updating Ubuntu
+
+```
+sudo apt update && sudo apt upgrade -y
+```
