@@ -3,6 +3,7 @@
 ## Default Site
 
 HTTP (ie: the IP) found at `/var/www/html/`
+
 HTTPS found at `/usr/share/nginx/html/index.html`
 
 ## Reverse Proxy
